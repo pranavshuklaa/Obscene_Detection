@@ -1,17 +1,10 @@
 {
-  "name": "Page URL",
-  "version": "1.0",
-  "description": "Displays the URL of the current page in a popup",
   "manifest_version": 2,
-  "background": {
-      "service_worker": "background.js"
-    },
-  "permissions": ["activeTab",
-  "http://localhost:8000/*",
-  "http://localhost:9000/*"],
-  "content_security_policy": "script-src 'self' 'unsafe-eval' http://localhost:9000/ http://localhost:8000/; object-src 'self'",
-  "browser_action": {
-    "default_title": "Page URL",
-    "default_popup": "popup.html"
-  }
+  "name": "Social Media Blocker",
+  "version": "0.0.1",
+  "content_scripts": [
+  {
+  "matches": ["<all_urls>"], "js":["content.js"] }
+  
+]
 }
